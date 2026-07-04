@@ -1,11 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #020617;
+  --foreground: #f8fafc;
 
-  --primary: #f97316;
-  --primary-hover: #ea580c;
+  --primary: #0ea5e9;
+  --primary-hover: #0284c7;
+
+  --surface: #0f172a;
+  --surface-muted: #111827;
+  --surface-dark: #020617;
+
+  --border: #1e293b;
+  --muted: #94a3b8;
+
+  --success: #22c55e;
+  --danger: #ef4444;
+  --warning: #f59e0b;
 }
 
 @theme inline {
@@ -14,6 +25,17 @@
 
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
+
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-dark: var(--surface-dark);
+
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);

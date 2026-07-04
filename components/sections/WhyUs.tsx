@@ -4,7 +4,7 @@ import { whyUs } from "@/content/whyUs";
 export default function WhyUs() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-20">
-      <div className="rounded-3xl border border-zinc-800 bg-zinc-900/70 p-8 md:p-10">
+      <div className="rounded-3xl border border-border bg-zinc-900/70 p-8 md:p-10">
         <SectionHeading
           badge={whyUs.badge}
           title={whyUs.title}
@@ -20,7 +20,7 @@ export default function WhyUs() {
                 {item.title}
               </h3>
 
-              <p className="mt-3 text-sm leading-6 text-zinc-400">
+              <p className="mt-3 text-sm leading-6 text-muted">
                 {item.description}
               </p>
             </div>

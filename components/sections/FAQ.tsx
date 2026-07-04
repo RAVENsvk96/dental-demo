@@ -31,13 +31,13 @@ export default function FAQ() {
                 duration: 0.5,
                 delay: index * 0.1,
               }}
-              className="rounded-3xl border border-zinc-800 bg-zinc-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10"
+              className="rounded-3xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10"
             >
               <h3 className="text-lg font-semibold text-white">
                 {item.question}
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-zinc-400">
+              <p className="mt-3 text-sm leading-7 text-muted">
                 {item.answer}
               </p>
             </motion.div>

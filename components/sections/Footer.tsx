@@ -3,12 +3,12 @@ import { company } from "@/content/company";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-800 bg-zinc-950">
+    <footer className="border-t border-border bg-surface-dark">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 md:grid-cols-3">
         <div>
           <Logo variant="full" className="h-20 w-auto" priority={false} />
 
-          <p className="mt-4 max-w-sm text-sm leading-6 text-zinc-400">
+          <p className="mt-4 max-w-sm text-sm leading-6 text-muted">
             Moderná zubná ambulancia poskytujúca kvalitnú stomatologickú
             starostlivosť pre deti aj dospelých v Nitre.
           </p>
@@ -17,7 +17,7 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold text-white">Navigácia</h3>
 
-          <div className="mt-4 flex flex-col gap-2 text-sm text-zinc-400">
+          <div className="mt-4 flex flex-col gap-2 text-sm text-muted">
             <a href="#" className="transition hover:text-cyan-500">
               Domov
             </a>
@@ -47,7 +47,7 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold text-white">Kontakt</h3>
 
-          <div className="mt-4 space-y-2 text-sm leading-6 text-zinc-400">
+          <div className="mt-4 space-y-2 text-sm leading-6 text-muted">
             <p>📍 {company.address}</p>
             <p>📞 {company.phone}</p>
             <p>✉️ {company.email}</p>
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-zinc-800 px-6 py-4 text-center text-sm text-zinc-500">
+      <div className="border-t border-border px-6 py-4 text-center text-sm text-zinc-500">
         © 2026 {company.name}. Všetky práva vyhradené.
       </div>
     </footer>

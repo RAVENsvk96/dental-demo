@@ -23,7 +23,7 @@ export default function SectionHeading({
 
       {description && (
         <p
-          className={`mt-4 text-zinc-400 ${
+          className={`mt-4 text-muted ${
             centered ? "mx-auto max-w-2xl" : "max-w-2xl"
           }`}
         >

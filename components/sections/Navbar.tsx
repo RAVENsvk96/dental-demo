@@ -11,7 +11,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("#");
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-border bg-zinc-950/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Logo />
 
@@ -44,7 +44,7 @@ export default function Navbar() {
             type="button"
             aria-label={isOpen ? "Zatvoriť menu" : "Otvoriť menu"}
             onClick={() => setIsOpen(!isOpen)}
-            className="rounded-xl border border-zinc-800 p-2 text-zinc-300 md:hidden"
+            className="rounded-xl border border-border p-2 text-zinc-300 md:hidden"
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -52,7 +52,7 @@ export default function Navbar() {
       </nav>
 
       {isOpen && (
-        <div className="border-t border-zinc-800 bg-zinc-950 px-6 py-4 md:hidden">
+        <div className="border-t border-border bg-surface-dark px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4 text-sm">
             {navigation.map((item) => (
               <a

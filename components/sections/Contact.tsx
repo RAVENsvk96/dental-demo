@@ -60,7 +60,7 @@ export default function Contact() {
         />
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
-          <div className="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition-all duration-300 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10">
+          <div className="rounded-3xl border border-border bg-surface p-8 transition-all duration-300 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10">
             <div className="space-y-6">
               {[
                 {
@@ -97,7 +97,7 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <p className="text-sm text-zinc-400">{item.label}</p>
+                      <p className="text-sm text-muted">{item.label}</p>
 
                       {item.href ? (
                         <a
@@ -117,7 +117,7 @@ export default function Contact() {
               })}
             </div>
 
-            <div className="mt-8 overflow-hidden rounded-3xl border border-zinc-800">
+            <div className="mt-8 overflow-hidden rounded-3xl border border-border">
               <iframe
                 src={company.mapUrl}
                 title={`${company.name} mapa`}
@@ -140,14 +140,14 @@ export default function Contact() {
 
           <form
             onSubmit={handleSubmit}
-            className="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition-all duration-300 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10"
+            className="rounded-3xl border border-border bg-surface p-8 transition-all duration-300 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10"
           >
             <div className="grid gap-4">
               <input
                 name="name"
                 required
                 placeholder="Vaše meno"
-                className="rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-white outline-none transition focus:border-cyan-500"
+                className="rounded-xl border border-border bg-surface-dark px-4 py-3 text-white outline-none transition focus:border-cyan-500"
               />
 
               <input
@@ -155,7 +155,7 @@ export default function Contact() {
                 type="email"
                 required
                 placeholder="Váš email"
-                className="rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-white outline-none transition focus:border-cyan-500"
+                className="rounded-xl border border-border bg-surface-dark px-4 py-3 text-white outline-none transition focus:border-cyan-500"
               />
 
               <textarea
@@ -163,7 +163,7 @@ export default function Contact() {
                 required
                 rows={5}
                 placeholder="Napíšte, s čím potrebujete pomôcť"
-                className="resize-none rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-white outline-none transition focus:border-cyan-500"
+                className="resize-none rounded-xl border border-border bg-surface-dark px-4 py-3 text-white outline-none transition focus:border-cyan-500"
               />
 
               <button

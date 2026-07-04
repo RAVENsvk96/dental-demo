@@ -2,116 +2,90 @@
 
 import Button from "@/components/ui/Button";
 import { company } from "@/content/company";
-import { hero } from "@/content/hero";
 import { heroFeatures } from "@/content/heroFeatures";
 import { motion } from "framer-motion";
 import { Phone, Star } from "lucide-react";
 import Image from "next/image";
 
-export default function Hero() {
+export default function HeroClinic() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute left-1/2 top-0 -z-10 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-cyan-500/15 blur-3xl" />
-      <div className="absolute right-0 top-1/3 -z-10 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
+    <section className="relative overflow-hidden px-6 py-20 sm:py-24 lg:py-28">
+      <div className="absolute left-1/2 top-0 -z-10 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-primary/15 blur-3xl" />
 
-      <div className="mx-auto grid min-h-[85vh] max-w-6xl items-center gap-14 px-6 py-20 sm:py-24 lg:grid-cols-2 lg:py-28">
+      <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          className="mx-auto max-w-4xl text-center"
         >
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-400 shadow-lg shadow-cyan-500/10">
-            <Star className="h-4 w-4 fill-cyan-400" />
-            {hero.badge}
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary shadow-lg shadow-primary/10">
+            <Star className="h-4 w-4 fill-primary" />
+            4.9 / 5 hodnotenie pacientov
           </div>
 
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-500">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-primary">
             {company.slogan}
           </p>
 
-          <h1 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl lg:text-6xl">
-            {hero.title}
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
+            Moderná zubná starostlivosť pre celú rodinu.
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-300">
-            {hero.description}
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
+            Poskytujeme preventívnu, estetickú a komplexnú stomatologickú
+            starostlivosť pre deti aj dospelých s dôrazom na komfort a
+            individuálny prístup.
           </p>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            {heroFeatures.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.text}
-                  className="flex items-center gap-3 rounded-2xl border border-zinc-800 bg-zinc-900/80 p-4 text-sm text-zinc-300 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/60 hover:bg-zinc-900 hover:shadow-lg hover:shadow-cyan-500/10"
-                >
-                  <Icon className="h-6 w-6 shrink-0 text-cyan-500" />
-                  <span className="font-medium">{item.text}</span>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button href="#kontakt">{hero.primaryButton}</Button>
+          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+            <Button href="#kontakt">Objednať termín</Button>
 
             <a
               href={`tel:${company.phone.replace(/\s/g, "")}`}
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-zinc-700 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-500/60 hover:bg-zinc-900"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-border px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/60 hover:bg-surface"
             >
-              <Phone className="h-5 w-5 text-cyan-500" />
-              {hero.secondaryButton}
+              <Phone className="h-5 w-5 text-primary" />
+              Zavolať
             </a>
           </div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="relative"
+          className="mt-14 overflow-hidden rounded-[2rem] border border-border bg-surface p-4 shadow-2xl shadow-black/40"
         >
-          <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-cyan-500/15 blur-2xl" />
+          <div className="relative overflow-hidden rounded-[1.5rem]">
+            <Image
+              src={company.heroImage}
+              alt={company.name}
+              width={1200}
+              height={650}
+              priority
+              className="h-[22rem] w-full object-cover object-center sm:h-[30rem]"
+            />
 
-          <div className="rounded-3xl border border-zinc-800 bg-zinc-900/90 p-4 shadow-2xl shadow-black/40 backdrop-blur sm:p-5">
-            <div className="relative overflow-hidden rounded-2xl">
-              <Image
-                src={company.heroImage}
-                alt={hero.imageAlt}
-                width={700}
-                height={500}
-                className="h-72 w-full rounded-2xl object-cover transition duration-700 hover:scale-105 sm:h-80"
-                priority
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-
-              <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-black/70 px-5 py-4 backdrop-blur sm:right-auto">
-                <p className="text-xs uppercase tracking-wider text-cyan-400">
-                  {hero.imageBadge}
-                </p>
-
-                <p className="mt-1 text-lg font-bold text-white">
-                  {company.openingHours}
-                </p>
-
-                <p className="mt-2 text-sm text-zinc-300">
-                  {hero.imageSubtitle}
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              {hero.stats.map((item) => (
-                <div key={item.title} className="rounded-2xl bg-zinc-950 p-4">
-                  <p className="text-sm text-zinc-400">{item.title}</p>
-                  <p className="mt-1 font-semibold">{item.value}</p>
-                </div>
-              ))}
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
           </div>
         </motion.div>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          {heroFeatures.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <div
+                key={item.text}
+                className="flex items-center justify-center gap-3 rounded-2xl border border-border bg-surface/80 p-5 text-sm text-zinc-300 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10"
+              >
+                <Icon className="h-6 w-6 shrink-0 text-primary" />
+                <span className="font-medium">{item.text}</span>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

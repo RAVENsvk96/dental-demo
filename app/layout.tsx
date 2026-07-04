@@ -17,29 +17,41 @@ export const metadata: Metadata = {
   metadataBase: new URL(company.website),
 
   title: {
-    default: `${company.name} | ${company.city}`,
+    default: `${company.name} | Moderná zubná ambulancia v Nitre`,
     template: `%s | ${company.name}`,
   },
 
   description: company.description,
 
   keywords: [
-    "autoservis",
-    "autoservis Nitra",
-    "diagnostika auta",
-    "pneuservis",
-    "výmena oleja",
-    "brzdy",
-    "oprava auta",
+    "zubná ambulancia",
+    "zubár Nitra",
+    "stomatológ Nitra",
+    "dentálna hygiena",
+    "estetická stomatológia",
+    "implantológia",
+    "ošetrenie zubného kazu",
+    "detská stomatológia",
+    "preventívna prehliadka",
   ],
 
-  authors: [{ name: company.name }],
+  applicationName: company.name,
+
+  category: "Healthcare",
+
+  authors: [
+    {
+      name: company.name,
+    },
+  ],
 
   openGraph: {
-    title: `${company.name} | ${company.city}`,
+    title: `${company.name} | Moderná zubná ambulancia v Nitre`,
     description: company.description,
     url: company.website,
     siteName: company.name,
+    locale: "sk_SK",
+    type: "website",
     images: [
       {
         url: company.ogImage,
@@ -48,13 +60,11 @@ export const metadata: Metadata = {
         alt: company.name,
       },
     ],
-    locale: "sk_SK",
-    type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: `${company.name} | ${company.city}`,
+    title: `${company.name} | Moderná zubná ambulancia v Nitre`,
     description: company.description,
     images: [company.ogImage],
   },
@@ -62,6 +72,12 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -75,7 +91,7 @@ export default function RootLayout({
       lang="sk"
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-zinc-950 text-white">
+      <body className="flex min-h-full flex-col bg-surface-dark text-white">
         {children}
       </body>
     </html>

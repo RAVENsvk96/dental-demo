@@ -1,56 +1,61 @@
 "use client";
 
-import Button from "@/components/ui/Button";
-import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/layout/SectionHeading";
-
 import { services } from "@/content/services";
 import { icons } from "@/lib/icons";
-
 import { motion } from "framer-motion";
 
-export default function Services() {
+export default function ServicesClinic() {
   return (
     <section id="sluzby" className="mx-auto max-w-6xl px-6 py-20">
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <SectionHeading badge="Služby" title="Naše služby" />
+        <SectionHeading
+          badge="Služby"
+          title="Komplexná starostlivosť na jednom mieste"
+          description="Od preventívnych prehliadok až po estetické a špecializované ošetrenia. Každú službu navrhujeme s dôrazom na komfort, dôveru a dlhodobé zdravie."
+        />
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-x-12 gap-y-2 md:grid-cols-2">
           {services.map((service, index) => {
             const Icon = icons[service.icon];
 
             return (
-              <motion.div
+              <motion.article
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="h-full"
+                transition={{ duration: 0.45, delay: index * 0.06 }}
+                className="group border-b border-border py-7"
               >
-                <Card className="flex h-full flex-col p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10">
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/10">
-                    <Icon className="h-6 w-6 text-cyan-500" />
+                <div className="flex gap-5">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-white">
+                    <Icon className="h-6 w-6" />
                   </div>
 
-                  <h3 className="text-lg font-semibold">
-                    {service.title}
-                  </h3>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">
+                      {service.title}
+                    </h3>
 
-                  <p className="mt-3 flex-1 text-sm leading-6 text-zinc-400">
-                    {service.description}
-                  </p>
+                    <p className="mt-3 text-sm leading-7 text-muted">
+                      {service.description}
+                    </p>
 
-                  <Button href="#kontakt" className="mt-6 w-full px-4 py-2">
-                    Objednať
-                  </Button>
-                </Card>
-              </motion.div>
+                    <a
+                      href={service.href ?? "#kontakt"}
+                      className="mt-4 inline-flex text-sm font-semibold text-primary transition hover:text-primary-hover"
+                    >
+                      Objednať konzultáciu
+                    </a>
+                  </div>
+                </div>
+              </motion.article>
             );
           })}
         </div>

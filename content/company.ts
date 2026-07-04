@@ -12,7 +12,7 @@ export const company: Company = {
   heroImage: "/images/hero.jpg",
   logo: "/images/logo-navbar.svg",
   logoFull: "/images/logo-full.svg",
-  ogImage: "/images/og-image.png",
+  ogImage: "/images/og-image.jpg",
 
   description:
     "Moderná zubná ambulancia v Nitre poskytujúca preventívnu, estetickú a komplexnú stomatologickú starostlivosť pre deti aj dospelých.",

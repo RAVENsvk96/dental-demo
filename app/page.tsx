@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <StructuredData />
 
-      <main className="min-h-screen bg-zinc-950 text-white">
+      <main className="min-h-screen bg-surface-dark text-white">
         <Navbar />
         <Hero />
         <Services />

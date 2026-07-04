@@ -14,8 +14,8 @@ export default function Card({
       className={`
         overflow-hidden
         rounded-3xl
-        border border-zinc-800
-        bg-zinc-900
+        border border-border
+        bg-surface
         transition-all duration-300
         ${className}
       `}
