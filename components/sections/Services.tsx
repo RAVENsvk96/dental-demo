@@ -46,12 +46,6 @@ export default function Services() {
                     {service.description}
                   </p>
 
-                  {service.price && (
-                    <p className="mt-6 font-semibold text-orange-500">
-                      {service.price}
-                    </p>
-                  )}
-
                   <Button href="#kontakt" className="mt-6 w-full px-4 py-2">
                     Objednať
                   </Button>

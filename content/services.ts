@@ -2,31 +2,39 @@ import type { Service } from "@/types/service";
 
 export const services: Service[] = [
   {
-    title: "Výmena oleja a filtrov",
+    title: "Preventívna stomatológia",
     description:
-      "Používame kvalitné oleje a filtre podľa odporúčania výrobcu.",
-    price: "od 59 €",
-    icon: "wrench",
+      "Pravidelné prehliadky, včasné odhalenie problémov a starostlivosť o zdravie zubov.",
+    icon: "shield-check",
   },
   {
-    title: "Brzdy a podvozok",
+    title: "Dentálna hygiena",
     description:
-      "Kontrola a oprava bŕzd, tlmičov a podvozka.",
-    price: "od 79 €",
-    icon: "disc",
+      "Profesionálne čistenie zubov, odstránenie povlaku a prevencia zápalov ďasien.",
+    icon: "sparkles",
   },
   {
-    title: "Pneuservis",
+    title: "Estetická stomatológia",
     description:
-      "Prezutie, vyváženie a uskladnenie pneumatík.",
-    price: "od 25 €",
-    icon: "circle-dot",
+      "Bielenie, estetické výplne a úprava úsmevu s prirodzeným výsledkom.",
+    icon: "smile",
   },
   {
-    title: "Diagnostika vozidla",
+    title: "Implantológia",
     description:
-      "Kompletná diagnostika riadiacich jednotiek.",
-    price: "od 30 €",
-    icon: "scan-search",
+      "Moderné riešenia pri strate zubov pomocou kvalitných zubných implantátov.",
+    icon: "badge-plus",
   },
+  {
+  title: "Ošetrenie zubného kazu",
+  description:
+    "Šetrné a presné ošetrenie kazov s dôrazom na komfort pacienta.",
+  icon: "stethoscope",
+},
+{
+  title: "Detská stomatológia",
+  description:
+    "Trpezlivý a ľudský prístup k deťom, aby návšteva zubára nebola stresom.",
+  icon: "heart",
+},
 ];

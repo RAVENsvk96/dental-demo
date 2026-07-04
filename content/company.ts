@@ -1,13 +1,13 @@
 import type { Company } from "@/types/company";
 
 export const company: Company = {
-  name: "AutoServis",
+  name: "Zubná ambulancia",
 
-  slogan: "Moderný autoservis v Nitre",
+  slogan: "Moderná zubná ambulancia v Nitre",
 
   city: "Nitra",
 
-  website: "https://autoservis-demo-beryl.vercel.app",
+  website: "https://dental-demo.vercel.app",
 
   heroImage: "/images/hero.jpg",
   logo: "/images/logo-navbar.png",
@@ -15,11 +15,11 @@ export const company: Company = {
   ogImage: "/images/og-image.png",
 
   description:
-    "Moderný autoservis v Nitre. Výmena oleja, brzdy, pneuservis, diagnostika a ďalšie služby.",
+    "Moderná zubná ambulancia v Nitre poskytujúca preventívnu, estetickú a komplexnú stomatologickú starostlivosť pre deti aj dospelých.",
 
   phone: "+421 900 123 456",
 
-  email: "info@autoservis.sk",
+  email: "info@zubnaambulancia.sk",
 
   address: "Nitra, Slovensko",
 

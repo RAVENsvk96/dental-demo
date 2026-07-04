@@ -1,13 +1,19 @@
 import {
-  Wrench,
-  Disc,
-  CircleDot,
-  ScanSearch,
+  BadgePlus,
+  ShieldCheck,
+  Smile,
+  Sparkles,
+  Heart,
+  Stethoscope,
 } from "lucide-react";
 
 export const icons = {
-  wrench: Wrench,
-  disc: Disc,
-  "circle-dot": CircleDot,
-  "scan-search": ScanSearch,
+  "badge-plus": BadgePlus,
+  "shield-check": ShieldCheck,
+  smile: Smile,
+  sparkles: Sparkles,
+  heart: Heart,
+  stethoscope: Stethoscope,
 };
+
+export type IconName = keyof typeof icons;

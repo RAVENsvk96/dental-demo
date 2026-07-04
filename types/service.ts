@@ -1,16 +1,10 @@
-export type ServiceIcon =
-  | "wrench"
-  | "disc"
-  | "circle-dot"
-  | "scan-search";
+import type { IconName } from "@/lib/icons";
 
 export interface Service {
   title: string;
   description: string;
 
-  icon: ServiceIcon;
-
-  price?: string;
+  icon: IconName;
 
   href?: string;
 
