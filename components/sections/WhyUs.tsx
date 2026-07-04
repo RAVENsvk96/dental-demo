@@ -10,13 +10,13 @@ export default function WhyUs() {
           title={whyUs.title}
         />
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {whyUs.items.map((item) => (
             <div
               key={item.title}
-              className="rounded-2xl border border-transparent bg-zinc-950/60 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/10"
+              className="rounded-2xl border border-transparent bg-zinc-950/60 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10"
             >
-              <h3 className="font-semibold text-orange-500">
+              <h3 className="font-semibold text-cyan-500">
                 {item.title}
               </h3>
 

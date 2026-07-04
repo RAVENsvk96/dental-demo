@@ -24,9 +24,9 @@ export default function Stats() {
               duration: 0.5,
               delay: index * 0.15,
             }}
-            className="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/10"
+            className="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10"
           >
-            <h3 className="text-5xl font-bold tracking-tight text-orange-500">
+            <h3 className="text-5xl font-bold tracking-tight text-cyan-500">
               <CountUp
                 end={stat.number}
                 duration={2}

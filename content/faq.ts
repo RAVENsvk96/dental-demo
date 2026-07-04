@@ -4,26 +4,26 @@ export const faq: FAQItem[] = [
   {
     question: "Musím sa objednať vopred?",
     answer:
-      "Áno, odporúčame objednať sa vopred, aby sme vám vedeli vyhradiť termín a skrátili čakanie na minimum.",
+      "Áno, odporúčame objednať sa vopred, aby sme vám vedeli rezervovať termín, ktorý vám bude vyhovovať.",
   },
   {
-    question: "Koľko trvá diagnostika auta?",
+    question: "Prijímate nových pacientov?",
     answer:
-      "Bežná diagnostika zvyčajne trvá približne 30 až 60 minút. Pri zložitejších poruchách vás vopred informujeme o ďalšom postupe.",
+      "Áno, aktuálne prijímame nových pacientov. Stačí nás kontaktovať telefonicky alebo prostredníctvom kontaktného formulára.",
   },
   {
-    question: "Opravujete všetky značky áut?",
+    question: "Je ošetrenie bolestivé?",
     answer:
-      "Venujeme sa väčšine bežných značiek osobných áut. Pri špecifických modeloch odporúčame kontaktovať nás vopred.",
+      "Dbáme na čo najšetrnejší prístup a podľa potreby používame moderné metódy lokálnej anestézie, aby bolo ošetrenie čo najkomfortnejšie.",
   },
   {
-    question: "Poviete mi cenu pred opravou?",
+    question: "Ako dlho trvá preventívna prehliadka?",
     answer:
-      "Áno. Pred samotnou opravou vám vysvetlíme problém, navrhneme riešenie a dohodneme sa na približnej cene.",
+      "Preventívna prehliadka zvyčajne trvá približne 20 až 30 minút v závislosti od individuálneho stavu chrupu.",
   },
   {
-    question: "Poskytujete záruku na opravy?",
+    question: "Môžem sa objednať aj telefonicky?",
     answer:
-      "Áno, na vykonané práce aj použité diely poskytujeme záruku podľa platných podmienok.",
+      "Samozrejme. Radi vám pomôžeme s výberom vhodného termínu telefonicky alebo prostredníctvom kontaktného formulára.",
   },
 ];

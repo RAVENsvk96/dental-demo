@@ -23,8 +23,8 @@ export default function Navbar() {
               onClick={() => setActiveSection(item.href)}
               className={`transition-colors duration-300 ${
                 activeSection === item.href
-                  ? "text-orange-500"
-                  : "text-zinc-300 hover:text-orange-500"
+                  ? "text-cyan-500"
+                  : "text-zinc-300 hover:text-cyan-500"
               }`}
             >
               {item.label}
@@ -64,8 +64,8 @@ export default function Navbar() {
                 }}
                 className={`transition-colors duration-300 ${
                   activeSection === item.href
-                    ? "text-orange-500"
-                    : "text-zinc-300 hover:text-orange-500"
+                    ? "text-cyan-500"
+                    : "text-zinc-300 hover:text-cyan-500"
                 }`}
               >
                 {item.label}

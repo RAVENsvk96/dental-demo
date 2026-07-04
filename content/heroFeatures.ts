@@ -1,16 +1,16 @@
-import { BadgeCheck, Car, Wrench } from "lucide-react";
+import { HeartPulse, ShieldCheck, Sparkles } from "lucide-react";
 
 export const heroFeatures = [
   {
-    icon: BadgeCheck,
-    text: "15 rokov skúseností",
+    icon: ShieldCheck,
+    text: "Bezbolestný prístup",
   },
   {
-    icon: Wrench,
-    text: "Certifikovaná diagnostika",
+    icon: Sparkles,
+    text: "Moderné vybavenie",
   },
   {
-    icon: Car,
-    text: "5000+ opravených áut",
+    icon: HeartPulse,
+    text: "Starostlivosť pre celú rodinu",
   },
 ];

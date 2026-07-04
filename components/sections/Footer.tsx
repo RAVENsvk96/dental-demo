@@ -9,7 +9,8 @@ export default function Footer() {
           <Logo variant="full" className="h-20 w-auto" priority={false} />
 
           <p className="mt-4 max-w-sm text-sm leading-6 text-zinc-400">
-            Rýchle, férové a spoľahlivé opravy vozidiel v Nitrianskom kraji.
+            Moderná zubná ambulancia poskytujúca kvalitnú stomatologickú
+            starostlivosť pre deti aj dospelých v Nitre.
           </p>
         </div>
 
@@ -17,13 +18,27 @@ export default function Footer() {
           <h3 className="font-semibold text-white">Navigácia</h3>
 
           <div className="mt-4 flex flex-col gap-2 text-sm text-zinc-400">
-            <a href="#" className="transition hover:text-orange-500">
+            <a href="#" className="transition hover:text-cyan-500">
               Domov
             </a>
-            <a href="#sluzby" className="transition hover:text-orange-500">
+
+            <a href="#sluzby" className="transition hover:text-cyan-500">
               Služby
             </a>
-            <a href="#kontakt" className="transition hover:text-orange-500">
+
+            <a href="#o-nas" className="transition hover:text-cyan-500">
+              O nás
+            </a>
+
+            <a href="#recenzie" className="transition hover:text-cyan-500">
+              Recenzie
+            </a>
+
+            <a href="#faq" className="transition hover:text-cyan-500">
+              FAQ
+            </a>
+
+            <a href="#kontakt" className="transition hover:text-cyan-500">
               Kontakt
             </a>
           </div>
@@ -36,6 +51,7 @@ export default function Footer() {
             <p>📍 {company.address}</p>
             <p>📞 {company.phone}</p>
             <p>✉️ {company.email}</p>
+            <p>🕒 {company.openingHours}</p>
           </div>
         </div>
       </div>

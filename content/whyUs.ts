@@ -1,22 +1,23 @@
 export const whyUs = {
   badge: "Prečo si vybrať nás",
-  title: "Férový autoservis bez zbytočných prekvapení",
+
+  title: "Moderná starostlivosť o váš úsmev",
 
   items: [
     {
-      title: "Rýchla diagnostika",
+      title: "Moderné vybavenie",
       description:
-        "Najprv zistíme skutočný problém a až potom navrhneme vhodné riešenie.",
+        "Používame moderné technológie a vybavenie pre presnú diagnostiku a kvalitné ošetrenie.",
     },
     {
-      title: "Jasná komunikácia",
+      title: "Individuálny prístup",
       description:
-        "Pred opravou viete, čo sa bude robiť a koľko to bude približne stáť.",
+        "Každému pacientovi venujeme dostatok času a navrhujeme riešenie podľa jeho potrieb.",
     },
     {
-      title: "Spoľahlivý servis",
+      title: "Bezbolestné ošetrenie",
       description:
-        "Postaráme sa o údržbu, brzdy, olej, diagnostiku aj bežné opravy.",
+        "Dbáme na komfort pacientov a robíme všetko pre príjemný priebeh každého ošetrenia.",
     },
   ],
 };

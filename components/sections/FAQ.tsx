@@ -31,7 +31,7 @@ export default function FAQ() {
                 duration: 0.5,
                 delay: index * 0.1,
               }}
-              className="rounded-3xl border border-zinc-800 bg-zinc-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/10"
+              className="rounded-3xl border border-zinc-800 bg-zinc-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10"
             >
               <h3 className="text-lg font-semibold text-white">
                 {item.question}

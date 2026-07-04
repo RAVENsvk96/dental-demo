@@ -10,6 +10,18 @@ export const navigation: NavigationItem[] = [
     href: "#sluzby",
   },
   {
+    label: "O nás",
+    href: "#o-nas",
+  },
+  {
+    label: "Recenzie",
+    href: "#recenzie",
+  },
+  {
+    label: "FAQ",
+    href: "#faq",
+  },
+  {
     label: "Kontakt",
     href: "#kontakt",
   },

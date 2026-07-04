@@ -2,18 +2,18 @@ import type { Review } from "@/types/review";
 
 export const reviews: Review[] = [
   {
-    name: "Martin K.",
-    text: "Bol som prvýkrát a určite nie naposledy. Auto opravili rýchlo a všetko mi vopred vysvetlili.",
+    name: "Jana M.",
+    text: "Veľmi príjemný personál a profesionálny prístup. Ošetrenie prebehlo bez bolesti a všetko mi bolo dopredu vysvetlené.",
     rating: 5,
   },
   {
-    name: "Peter S.",
-    text: "Príjemný prístup, žiadne zbytočné výmeny dielov navyše. Presne takto si predstavujem dobrý servis.",
+    name: "Peter K.",
+    text: "Objednanie bolo rýchle, ambulancia je moderná a lekár bol veľmi ochotný. Určite odporúčam.",
     rating: 5,
   },
   {
-    name: "Lucia M.",
-    text: "Termín som dostala rýchlo, komunikácia bola bez problémov a s opravou som veľmi spokojná.",
+    name: "Lucia S.",
+    text: "Na dentálnej hygiene som bola prvýkrát a som maximálne spokojná. Príjemná atmosféra a skvelý prístup.",
     rating: 5,
   },
 ];

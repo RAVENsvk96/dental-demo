@@ -10,8 +10,8 @@ export const company: Company = {
   website: "https://dental-demo.vercel.app",
 
   heroImage: "/images/hero.jpg",
-  logo: "/images/logo-navbar.png",
-  logoFull: "/images/logo-full.png",
+  logo: "/images/logo-navbar.svg",
+  logoFull: "/images/logo-full.svg",
   ogImage: "/images/og-image.png",
 
   description:

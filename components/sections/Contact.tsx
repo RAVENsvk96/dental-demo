@@ -55,12 +55,12 @@ export default function Contact() {
       >
         <SectionHeading
           badge="Kontakt"
-          title="Dohodnite si termín ešte dnes"
-          description="Zavolajte nám alebo nám napíšte. Radi vám poradíme, pripravíme cenovú ponuku a nájdeme najbližší voľný termín."
+          title="Objednajte sa na vyšetrenie"
+          description="Zavolajte nám alebo nám napíšte. Radi vám pomôžeme s výberom vhodného termínu a odpovieme na vaše otázky."
         />
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
-          <div className="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition-all duration-300 hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/10">
+          <div className="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition-all duration-300 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10">
             <div className="space-y-6">
               {[
                 {
@@ -92,8 +92,8 @@ export default function Contact() {
 
                 return (
                   <div key={item.label} className="flex items-center gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-orange-500/10">
-                      <Icon className="h-5 w-5 text-orange-500" />
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-cyan-500/10">
+                      <Icon className="h-5 w-5 text-cyan-500" />
                     </div>
 
                     <div>
@@ -104,7 +104,7 @@ export default function Contact() {
                           href={item.href}
                           target={item.external ? "_blank" : undefined}
                           rel={item.external ? "noopener noreferrer" : undefined}
-                          className="font-semibold transition hover:text-orange-500"
+                          className="font-semibold transition hover:text-cyan-500"
                         >
                           {item.value}
                         </a>
@@ -131,7 +131,7 @@ export default function Contact() {
               href={mapsLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-orange-500 transition hover:text-orange-400"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-cyan-500 transition hover:text-cyan-400"
             >
               <MapPin className="h-4 w-4" />
               Otvoriť v Google Maps
@@ -140,14 +140,14 @@ export default function Contact() {
 
           <form
             onSubmit={handleSubmit}
-            className="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition-all duration-300 hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/10"
+            className="rounded-3xl border border-zinc-800 bg-zinc-900 p-8 transition-all duration-300 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10"
           >
             <div className="grid gap-4">
               <input
                 name="name"
                 required
                 placeholder="Vaše meno"
-                className="rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-white outline-none transition focus:border-orange-500"
+                className="rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-white outline-none transition focus:border-cyan-500"
               />
 
               <input
@@ -155,7 +155,7 @@ export default function Contact() {
                 type="email"
                 required
                 placeholder="Váš email"
-                className="rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-white outline-none transition focus:border-orange-500"
+                className="rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-white outline-none transition focus:border-cyan-500"
               />
 
               <textarea
@@ -163,13 +163,13 @@ export default function Contact() {
                 required
                 rows={5}
                 placeholder="Napíšte, s čím potrebujete pomôcť"
-                className="resize-none rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-white outline-none transition focus:border-orange-500"
+                className="resize-none rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-white outline-none transition focus:border-cyan-500"
               />
 
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600 disabled:cursor-not-allowed disabled:opacity-60"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 font-semibold text-white transition hover:bg-cyan-600 disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {status === "loading" ? "Odosielam..." : "Odoslať správu"}
                 <Send className="h-5 w-5" />
