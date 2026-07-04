@@ -6,8 +6,6 @@ import Services from "@/components/sections/Services";
 import WhyUs from "@/components/sections/WhyUs";
 import Reviews from "@/components/sections/Reviews";
 import FAQ from "@/components/sections/FAQ";
-import CTA from "@/components/sections/CTA";
-import Stats from "@/components/sections/Stats";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 
@@ -23,8 +21,6 @@ export default function Home() {
         <WhyUs />
         <Reviews />
         <FAQ />
-        <CTA />
-        <Stats />
         <Contact />
         <Footer />
       </main>

@@ -18,9 +18,10 @@ export default function FAQ() {
         <SectionHeading
           badge="FAQ"
           title="Časté otázky"
+          description="Odpovede na otázky, ktoré od našich pacientov dostávame najčastejšie."
         />
 
-        <div className="mt-10 grid gap-6">
+        <div className="mt-12 grid gap-6">
           {faq.map((item, index) => (
             <motion.div
               key={item.question}
@@ -29,15 +30,15 @@ export default function FAQ() {
               viewport={{ once: true }}
               transition={{
                 duration: 0.5,
-                delay: index * 0.1,
+                delay: index * 0.08,
               }}
-              className="rounded-3xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10"
+              className="rounded-[1.75rem] border border-border bg-surface p-7 transition-all duration-300 hover:border-primary/60 hover:bg-surface-dark hover:shadow-lg hover:shadow-primary/10"
             >
-              <h3 className="text-lg font-semibold text-white">
+              <h3 className="text-xl font-semibold text-white">
                 {item.question}
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-muted">
+              <p className="mt-4 text-sm leading-7 text-muted">
                 {item.answer}
               </p>
             </motion.div>

@@ -64,6 +64,8 @@ export default function HeroClinic() {
               width={1200}
               height={650}
               priority
+              fetchPriority="high"
+              sizes="(max-width: 768px) 100vw, 1200px"
               className="h-[22rem] w-full object-cover object-center sm:h-[30rem]"
             />
 

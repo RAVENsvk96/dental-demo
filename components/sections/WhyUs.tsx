@@ -1,32 +1,50 @@
+"use client";
+
 import SectionHeading from "@/components/layout/SectionHeading";
 import { whyUs } from "@/content/whyUs";
+import { CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
 
-export default function WhyUs() {
+
+export default function WhyUsClinic() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-20">
-      <div className="rounded-3xl border border-border bg-zinc-900/70 p-8 md:p-10">
+      <motion.div
+        initial={{ opacity: 0, y: 32 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <SectionHeading
           badge={whyUs.badge}
           title={whyUs.title}
         />
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {whyUs.items.map((item) => (
-            <div
+        <div className="mt-14 grid gap-10 md:grid-cols-3">
+          {whyUs.items.map((item, index) => (
+            <motion.div
               key={item.title}
-              className="rounded-2xl border border-transparent bg-zinc-950/60 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/10"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: index * 0.08 }}
+              className="text-center"
             >
-              <h3 className="font-semibold text-cyan-500">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                <CheckCircle2 className="h-8 w-8 text-primary" />
+              </div>
+
+              <h3 className="mt-6 text-xl font-semibold text-white">
                 {item.title}
               </h3>
 
-              <p className="mt-3 text-sm leading-6 text-muted">
+              <p className="mt-4 leading-7 text-muted">
                 {item.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

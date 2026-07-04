@@ -6,9 +6,9 @@ export default function Footer() {
     <footer className="border-t border-border bg-surface-dark">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 md:grid-cols-3">
         <div>
-          <Logo variant="full" className="h-20 w-auto" priority={false} />
+          <Logo className="h-16 w-auto" priority={false} />
 
-          <p className="mt-4 max-w-sm text-sm leading-6 text-muted">
+          <p className="mt-5 max-w-sm text-sm leading-6 text-muted">
             Moderná zubná ambulancia poskytujúca kvalitnú stomatologickú
             starostlivosť pre deti aj dospelých v Nitre.
           </p>
@@ -18,27 +18,35 @@ export default function Footer() {
           <h3 className="font-semibold text-white">Navigácia</h3>
 
           <div className="mt-4 flex flex-col gap-2 text-sm text-muted">
-            <a href="#" className="transition hover:text-cyan-500">
+            <a href="#" className="transition-colors hover:text-primary">
               Domov
             </a>
 
-            <a href="#sluzby" className="transition hover:text-cyan-500">
+            <a
+              href="#sluzby"
+              className="transition-colors hover:text-primary"
+            >
               Služby
             </a>
 
-            <a href="#o-nas" className="transition hover:text-cyan-500">
-              O nás
-            </a>
-
-            <a href="#recenzie" className="transition hover:text-cyan-500">
+            <a
+              href="#recenzie"
+              className="transition-colors hover:text-primary"
+            >
               Recenzie
             </a>
 
-            <a href="#faq" className="transition hover:text-cyan-500">
+            <a
+              href="#faq"
+              className="transition-colors hover:text-primary"
+            >
               FAQ
             </a>
 
-            <a href="#kontakt" className="transition hover:text-cyan-500">
+            <a
+              href="#kontakt"
+              className="transition-colors hover:text-primary"
+            >
               Kontakt
             </a>
           </div>
@@ -56,8 +64,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-border px-6 py-4 text-center text-sm text-zinc-500">
-        © 2026 {company.name}. Všetky práva vyhradené.
+      <div className="border-t border-border px-6 py-5 text-center text-sm text-muted">
+        © {new Date().getFullYear()} {company.name}. Všetky práva vyhradené.
       </div>
     </footer>
   );
