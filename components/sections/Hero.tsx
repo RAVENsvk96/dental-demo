@@ -4,7 +4,7 @@ import Button from "@/components/ui/Button";
 import { company } from "@/content/company";
 import { heroFeatures } from "@/content/heroFeatures";
 import { motion } from "framer-motion";
-import { Phone, Star } from "lucide-react";
+import { Phone } from "lucide-react";
 import Image from "next/image";
 
 export default function HeroClinic() {
@@ -19,11 +19,6 @@ export default function HeroClinic() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-4xl text-center"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary shadow-lg shadow-primary/10">
-            <Star className="h-4 w-4 fill-primary" />
-            4.9 / 5 hodnotenie pacientov
-          </div>
-
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-primary">
             {company.slogan}
           </p>
@@ -49,13 +44,28 @@ export default function HeroClinic() {
               Zavolať
             </a>
           </div>
+
+          <div className="mt-6 flex items-center justify-center gap-3">
+            <div className="flex text-primary" aria-hidden="true">
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+
+            <p className="text-sm text-muted">
+              <span className="font-semibold text-white">4.9 / 5</span>{" "}
+              z hodnotení pacientov
+            </p>
+          </div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-14 overflow-hidden rounded-[2rem] border border-border bg-surface p-4 shadow-2xl shadow-black/40"
+          className="mt-12 overflow-hidden rounded-[2rem] border border-border bg-surface p-4 shadow-2xl shadow-black/40"
         >
           <div className="relative overflow-hidden rounded-[1.5rem]">
             <Image
