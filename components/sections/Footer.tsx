@@ -1,71 +1,32 @@
 import Logo from "@/components/ui/Logo";
-import { company } from "@/content/company";
+import { ExternalLink } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-surface-dark">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 md:grid-cols-3">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 md:flex-row md:items-center md:justify-between">
         <div>
           <Logo className="h-16 w-auto" priority={false} />
 
-          <p className="mt-5 max-w-sm text-sm leading-6 text-muted">
-            Moderná zubná ambulancia poskytujúca kvalitnú stomatologickú
-            starostlivosť pre deti aj dospelých v Nitre.
+          <p className="mt-5 max-w-xl text-sm leading-6 text-muted">
+            Ukážkový webový koncept vytvorený Samuelom Zelískom. Nejde o
+            skutočnú zubnú ambulanciu ani ponuku zdravotnej starostlivosti.
           </p>
         </div>
 
-        <div>
-          <h3 className="font-semibold text-white">Navigácia</h3>
-
-          <div className="mt-4 flex flex-col gap-2 text-sm text-muted">
-            <a href="#" className="transition-colors hover:text-primary">
-              Domov
-            </a>
-
-            <a
-              href="#sluzby"
-              className="transition-colors hover:text-primary"
-            >
-              Služby
-            </a>
-
-            <a
-              href="#recenzie"
-              className="transition-colors hover:text-primary"
-            >
-              Recenzie
-            </a>
-
-            <a
-              href="#faq"
-              className="transition-colors hover:text-primary"
-            >
-              FAQ
-            </a>
-
-            <a
-              href="#kontakt"
-              className="transition-colors hover:text-primary"
-            >
-              Kontakt
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <h3 className="font-semibold text-white">Kontakt</h3>
-
-          <div className="mt-4 space-y-2 text-sm leading-6 text-muted">
-            <p>📍 {company.address}</p>
-            <p>📞 {company.phone}</p>
-            <p>✉️ {company.email}</p>
-            <p>🕒 {company.openingHours}</p>
-          </div>
-        </div>
+        <a
+          href="https://www.samuelzeliska.sk"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:text-cyan-300"
+        >
+          www.samuelzeliska.sk
+          <ExternalLink className="h-4 w-4" />
+        </a>
       </div>
 
       <div className="border-t border-border px-6 py-5 text-center text-sm text-muted">
-        © {new Date().getFullYear()} {company.name}. Všetky práva vyhradené.
+        © {new Date().getFullYear()} Samuel Zelíska · Portfolio demo projekt
       </div>
     </footer>
   );

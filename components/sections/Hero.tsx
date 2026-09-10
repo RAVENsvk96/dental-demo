@@ -4,7 +4,7 @@ import Button from "@/components/ui/Button";
 import { company } from "@/content/company";
 import { heroFeatures } from "@/content/heroFeatures";
 import { motion } from "framer-motion";
-import { Phone } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 
 export default function HeroClinic() {
@@ -20,7 +20,7 @@ export default function HeroClinic() {
           className="mx-auto max-w-4xl text-center"
         >
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-primary">
-            {company.slogan}
+            Demo koncept webovej stránky
           </p>
 
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
@@ -28,37 +28,28 @@ export default function HeroClinic() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-            Poskytujeme preventívnu, estetickú a komplexnú stomatologickú
-            starostlivosť pre deti aj dospelých s dôrazom na komfort a
-            individuálny prístup.
+            Ukážka toho, ako môže prehľadný a dôveryhodný web prezentovať služby
+            modernej zubnej ambulancie.
           </p>
 
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <Button href="#kontakt">Objednať termín</Button>
+            <Button href="#sluzby">Pozrieť ukážku</Button>
 
             <a
-              href={`tel:${company.phone.replace(/\s/g, "")}`}
+              href="https://www.samuelzeliska.sk/#projekty"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-border px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/60 hover:bg-surface"
             >
-              <Phone className="h-5 w-5 text-primary" />
-              Zavolať
+              Autor projektu
+              <ExternalLink className="h-5 w-5 text-primary" />
             </a>
           </div>
 
-          <div className="mt-6 flex items-center justify-center gap-3">
-            <div className="flex text-primary" aria-hidden="true">
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-            </div>
-
-            <p className="text-sm text-muted">
-              <span className="font-semibold text-white">4.9 / 5</span>{" "}
-              z hodnotení pacientov
-            </p>
-          </div>
+          <p className="mx-auto mt-6 max-w-xl text-sm leading-6 text-muted">
+            Fiktívny prezentačný obsah. Web neprijíma objednávky a neposkytuje
+            zdravotné poradenstvo.
+          </p>
         </motion.div>
 
         <motion.div
@@ -70,7 +61,7 @@ export default function HeroClinic() {
           <div className="relative overflow-hidden rounded-[1.5rem]">
             <Image
               src={company.heroImage}
-              alt={company.name}
+              alt="Ukážkový vizuál webu zubnej ambulancie"
               width={1200}
               height={650}
               priority

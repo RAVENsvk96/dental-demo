@@ -1,4 +1,3 @@
-import { company } from "@/content/company";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -13,71 +12,50 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://dental-demo-weld.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(company.website),
-
+  metadataBase: new URL(siteUrl),
   title: {
-    default: `${company.name} | Moderná zubná ambulancia v Nitre`,
-    template: `%s | ${company.name}`,
+    default: "Zubná ambulancia — demo web | Samuel Zelíska",
+    template: "%s | Demo web Samuela Zelísku",
   },
-
-  description: company.description,
-
-  keywords: [
-    "zubná ambulancia",
-    "zubár Nitra",
-    "stomatológ Nitra",
-    "dentálna hygiena",
-    "estetická stomatológia",
-    "implantológia",
-    "ošetrenie zubného kazu",
-    "detská stomatológia",
-    "preventívna prehliadka",
-  ],
-
-  applicationName: company.name,
-
-  category: "Healthcare",
-
-  authors: [
-    {
-      name: company.name,
-    },
-  ],
-
+  description:
+    "Samostatne vytvorený ukážkový koncept webovej stránky pre zubnú ambulanciu. Nejde o skutočnú ambulanciu ani ponuku zdravotnej starostlivosti.",
+  applicationName: "Demo web zubnej ambulancie",
+  category: "Portfolio demo",
+  authors: [{ name: "Samuel Zelíska", url: "https://www.samuelzeliska.sk" }],
   openGraph: {
-    title: `${company.name} | Moderná zubná ambulancia v Nitre`,
-    description: company.description,
-    url: company.website,
-    siteName: company.name,
+    title: "Zubná ambulancia — ukážkový webový koncept",
+    description:
+      "Demo projekt vytvorený na prezentáciu webového dizajnu a vývoja. Nejde o skutočnú ambulanciu.",
+    url: siteUrl,
+    siteName: "Portfolio demo Samuela Zelísku",
     locale: "sk_SK",
     type: "website",
     images: [
       {
-        url: company.ogImage,
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: company.name,
+        alt: "Ukážkový koncept webu zubnej ambulancie",
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
-    title: `${company.name} | Moderná zubná ambulancia v Nitre`,
-    description: company.description,
-    images: [company.ogImage],
+    title: "Zubná ambulancia — ukážkový webový koncept",
+    description: "Demo projekt Samuela Zelísku. Nejde o skutočnú ambulanciu.",
+    images: ["/images/og-image.jpg"],
   },
-
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
+    googleBot: { index: false, follow: false },
   },
-
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
   },
 };
 

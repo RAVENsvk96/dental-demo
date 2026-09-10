@@ -1,14 +1,28 @@
 "use client";
 
 import SectionHeading from "@/components/layout/SectionHeading";
-import { reviews } from "@/content/review";
 import { motion } from "framer-motion";
-import { Quote, Star } from "lucide-react";
+import { HeartHandshake, MessageCircle, ShieldCheck } from "lucide-react";
+
+const experienceGoals = [
+  {
+    icon: ShieldCheck,
+    title: "Dôveryhodná prezentácia",
+    text: "Pokojný vizuálny štýl a jasná hierarchia pomáhajú návštevníkovi rýchlo sa zorientovať.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Zrozumiteľné informácie",
+    text: "Služby a dôležité odpovede sú usporiadané tak, aby boli ľahko dostupné na každom zariadení.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Príjemná používateľská skúsenosť",
+    text: "Návrh ukazuje, ako môže moderný web pôsobiť profesionálne, ľudsky a bez zbytočného chaosu.",
+  },
+];
 
 export default function Reviews() {
-  const featuredReview = reviews[0];
-  const otherReviews = reviews.slice(1);
-
   return (
     <section id="recenzie" className="mx-auto max-w-6xl px-6 py-20">
       <motion.div
@@ -18,71 +32,38 @@ export default function Reviews() {
         transition={{ duration: 0.6 }}
       >
         <SectionHeading
-          badge="Recenzie"
-          title="Pacienti oceňujú náš pokojný prístup"
-          description="Dôvera, komunikácia a komfort sú pre nás rovnako dôležité ako samotné ošetrenie."
+          badge="Ciele návrhu"
+          title="Web navrhnutý s dôrazom na dôveru"
+          description="Táto sekcia predstavuje dizajnové a používateľské ciele demo projektu. Neobsahuje recenzie skutočných pacientov."
         />
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-          <motion.article
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="rounded-[2rem] border border-border bg-surface p-8 shadow-2xl shadow-black/20"
-          >
-            <Quote className="h-10 w-10 text-primary" />
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {experienceGoals.map((item, index) => {
+            const Icon = item.icon;
 
-            <div className="mt-6 flex gap-1 text-primary">
-              {Array.from({ length: featuredReview.rating }).map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-primary" />
-              ))}
-            </div>
-
-            <p className="mt-6 text-xl leading-9 text-white">
-              “{featuredReview.text}”
-            </p>
-
-            <div className="mt-8 flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary font-bold text-white">
-                {featuredReview.name.charAt(0)}
-              </div>
-
-              <div>
-                <p className="font-semibold text-white">
-                  {featuredReview.name}
-                </p>
-                <p className="text-sm text-muted">Overený pacient</p>
-              </div>
-            </div>
-          </motion.article>
-
-          <div className="grid gap-6">
-            {otherReviews.map((review, index) => (
+            return (
               <motion.article
-                key={review.name}
+                key={item.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: index * 0.08 }}
-                className="rounded-[1.5rem] border border-border bg-surface/70 p-6"
+                className="rounded-[1.5rem] border border-border bg-surface/70 p-7"
               >
-                <div className="flex gap-1 text-primary">
-                  {Array.from({ length: review.rating }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-primary" />
-                  ))}
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10">
+                  <Icon className="h-6 w-6 text-primary" />
                 </div>
 
-                <p className="mt-4 text-sm leading-7 text-zinc-300">
-                  “{review.text}”
-                </p>
+                <h3 className="mt-6 text-xl font-semibold text-white">
+                  {item.title}
+                </h3>
 
-                <p className="mt-5 font-semibold text-white">
-                  {review.name}
+                <p className="mt-4 text-sm leading-7 text-zinc-300">
+                  {item.text}
                 </p>
               </motion.article>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </motion.div>
     </section>

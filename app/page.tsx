@@ -1,5 +1,3 @@
-import StructuredData from "@/components/seo/StructuredData";
-
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
@@ -11,19 +9,15 @@ import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <>
-      <StructuredData />
-
-      <main className="min-h-screen bg-surface-dark text-white">
-        <Navbar />
-        <Hero />
-        <Services />
-        <WhyUs />
-        <Reviews />
-        <FAQ />
-        <Contact />
-        <Footer />
-      </main>
-    </>
+    <main className="min-h-screen bg-surface-dark text-white">
+      <Navbar />
+      <Hero />
+      <Services />
+      <WhyUs />
+      <Reviews />
+      <FAQ />
+      <Contact />
+      <Footer />
+    </main>
   );
 }
