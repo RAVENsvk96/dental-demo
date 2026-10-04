@@ -1,3 +1,5 @@
+import "./dental-polish.css";
+import DentalMotion from "@/components/ui/DentalMotion";
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
@@ -9,7 +11,7 @@ import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-surface-dark text-white">
+    <DentalMotion><main className="dental-polish min-h-screen bg-surface-dark text-white">
       <Navbar />
       <Hero />
       <Services />
@@ -18,6 +20,6 @@ export default function Home() {
       <FAQ />
       <Contact />
       <Footer />
-    </main>
+    </main></DentalMotion>
   );
 }
